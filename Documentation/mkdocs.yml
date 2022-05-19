@@ -1,5 +1,5 @@
 #------------ Project Information ------------
-site_name: LABORATORIO - Comparar el tamaño de dos cadenas de texto (strings) 
+site_name: Ejercicio practico - Comparar el tamaño de dos cadenas de texto (strings).  
 site_url: 
 site_author: Adriel E. González Martínez
 site_description: >-
@@ -80,16 +80,16 @@ font:
 extra_css:
   - stylesheets/custom.css
 
-#--- Theme Plugins ---
+#--- Plugins ---
 plugins:
   - search
   #- minify:
       #minify_html: true
       #minify_js: true
-  - include-markdown
+ # - include-markdown - DISABLE
 #----- Theme configuration ends -----
 
-#---------- Markdown Extensions ----------
+#---------- Markdown (Python) Extensions ----------
 markdown_extensions:
   - md_in_html
   - meta

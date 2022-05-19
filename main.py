@@ -1,2 +1,1 @@
-x + 1
-print(x)
+print(3 + 2)

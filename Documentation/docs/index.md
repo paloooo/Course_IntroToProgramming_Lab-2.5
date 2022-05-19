@@ -2,30 +2,57 @@
 hide:
   - navigation
 ---
-# Laboratorio - Comparar el tamaño de dos cadenas de texto *(`string`)*
+# Ejercicio :muscle: practico: Comparar el tamaño de dos cadenas de texto *(`string`)*
 
 ***
-
 ## Introducción
 
-En el este ejercicio de laboratorio vamos a escribir un programa que haga lo siguiente:
+En este ejercicio :muscle: practico vamos a diseñar e implementar un programa que haga lo siguiente:
 
-* Que le pida al usuario 2 palabras
+* Pedir al usuario que entre 2 palabras 
+* Imprima las 2 palabras entradas 
 * Cuente cuantos caracteres tienen esas 2 palabras usando la función de `len( )`
 * Imprima cuantos caracteres tiene cada palabra
-* Compare las 2 palabras y diga cuál tiene más caracteres
+* Compare las 2 palabras y diga cuál tiene más caracteres. 
 
-Para lograr esto necesitas haber adquirido ciertos conocimientos. En la sección de [**Prerrequisitos**](https://largo-de-un-string.palo-ooo.repl.co/#prerequisitos "Ir a la sección de Prerequisitos") te muestro cuales son esos conocimientos. Al principio de la sección de [**Prerrequisitos**](https://largo-de-un-string.palo-ooo.repl.co/#prerequisitos "Ir a la sección de Prerequisitos") verás un enlace a una preprueba. Si obtienes una puntuación de 10 en la preprueba entonces puedes pasar directo a la sección de [**Discusión**](https://largo-de-un-string.palo-ooo.repl.co/#discusion "Ir a la sección de Discusión")
+Para lograr esto necesitas haber adquirido ciertos conocimientos. En la sección de [**Prerrequisitos**](https://largo-de-un-string.palo-ooo.repl.co/#prerequisitos "Ir a la sección de Prerequisitos") te muestro cuales son esos conocimientos. Al principio de la sección de [**Prerrequisitos**](https://largo-de-un-string.palo-ooo.repl.co/#prerequisitos "Ir a la sección de Prerequisitos") verás un enlace a una preprueba. Si obtienes una puntuación de 10 puntos o más en la preprueba entonces puedes pasar directo a la sección de [**Discusión**](https://largo-de-un-string.palo-ooo.repl.co/#discusion "Ir a la sección de Discusión"). 
+
 ***
-
 ## Prerrequisitos
 
-Para poder entender el código que estaremos presentando en la sección de discusión, ***primero necesitas conocer y entender las siguientes funciones*** de ***Python :snake:*** :
+Para poder entender el código con el que estarás trabajando, ***primero necesitas conocer y entender las siguientes funciones*** de ***Python :snake:*** :
+
+En la tabla a continuación :point_down: te muestro que conceptos y destrezas necesitas dominar **antes de continuar**.
 
 >:loudspeaker: **¡ATENCIÓN!**
 >
->Si ya conoces y entiendes todas las funciones que aparecen a continuación, puedes continuar a la sección de [**Discusión**](https://largo-de-un-string.palo-ooo.repl.co/#discusion "Ir a la sección de Discusión")
+>Si ya conoces y entiendes todas las funciones que aparecen a en la tabla a continuación :point_down:, puedes continuar a tomar la  
+[**preprueba**](https://introtoprogramminglab-025.palo-ooo.repl.co/#preprueba)
 
+| **FUNCIÓN**  | **APLICACIÓN**                                                      |
+|--------------|---------------------------------------------------------------------|
+| [print( )](https://introtoprogramminglab-025.palo-ooo.repl.co/#print "Leer sobre la función de print( )")     | Cómo imprimir mensajes que Incluyan el valor de 1 o más variables   |
+| [print( )](https://introtoprogramminglab-025.palo-ooo.repl.co/#print "Leer sobre la función de print( )")     | Cómo concatenar varios `strings` y expresiones númericas            |
+| [input( )](https://introtoprogramminglab-025.palo-ooo.repl.co/#print "Leer sobre la función de print( )")     | Cómo asignar valores a variables                                    |
+| [>, <, >=, <=](https://introtoprogramminglab-025.palo-ooo.repl.co/#print "Leer sobre la función de print( )") | Comparar 1 o más valores                                            |
+| [if else](https://introtoprogramminglab-025.palo-ooo.repl.co/#print "Leer sobre la función de print( )")     | Cambiar mensajes de print( ) dependiendo el valor de las variables. |
+|              |                                                                     |
+
+***
+:loudspeaker: **¡ATENCIÓN!**
+
+Para que estemos seguros que dominas los conceptos y destrezas necesarias para que puedas aprovechar al máximo el ejercicio vamos a tomar una prueba corta
+
+### Preprueba
+
+:crossed_swords: 
+<a href="https://forms.office.com/r/uDJuzsBDik"  target="_new"><strong>Haz clic en este enlace para tomar la Preprueba</strong></a>
+
+### :stop_sign: ¿Obtuviste menos de 10 puntos en la prueba? ###
+
+Si te equivocas en alguna de las preguntas de la prueba te recomiendo visitar la sección que corresponda para que repases el material. Para encontrar la sección (puedes usar la **`Tabla de contenidos a la derecha`** :point_right:) ó usar la barra de busqueda en la parte superior :point_up: de la página.   
+
+***
 ### Print
 
 **Sintaxis:**
@@ -34,19 +61,23 @@ Después del comando print hay un par de paréntesis `( )`. Dentro de estos par�
 
 > :pushpin: **¡RECUERDA!**
 >
->Usar paréntesis para pasar información a una función es una práctica muy común en las matemáticas y en los lenguajes de programación.
+>Usar paréntesis para pasar información a una función es una práctica muy común en las matemáticas y en la mayoría de los lenguajes de programación.
 
 #### Cadenas de texto (`strings`)
 
-Para imprimir cadenas de texto (`strings`)hay que añadir comillas (`" "`) antes y después del texto a imprimir.
+Para imprimir cadenas de texto (`strings`) hay que añadir comillas (`" "`) antes y después del texto a imprimir.
 
 ```python title="Ejemplo de la función de print" linenums="1" hl_lines="1"
 print("Hola Mundo")
 ```
+![Replit.com - Captura de pantalla](https://user-images.githubusercontent.com/67485637/169345546-d18290be-9f8d-4d2c-8f90-72080b70ddc7.png "Captura de pantalla de replit.com. Se muestra el editor de código y la consola.")
+
 Pero, si no se escriben las comillas (`" "`), ***Python :snake:*** va a interpretar que estás tratando de escribir una expresión matemática. Observa el siguiente ejemplo: 
-```python title="Un error al tratar de imprimir un texto" linenums="1" hl_lines="1"
+```python title="Un error al tratar de imprimir un texto (string)" linenums="1" hl_lines="1"
 print(Hola Mundo)#Esto va a devolver un error.  
 ```
+![Replit.com - Captura de pantalla](https://user-images.githubusercontent.com/67485637/169346827-3b451284-e5ac-405e-aab8-57409dcf4ae1.png "Captura de pantalla de replit.com. Se muestra el editor de código y el error producido en la consola.")
+
 #### Números
 
 Para imprimir números, no se necesitan las comillas (`" "`) 
@@ -56,14 +87,11 @@ print(3 + 2)# En este caso va a imprimir 5
 ```
 Pero, si añadimos las comillas (`" "`), entonces ***Python :snake:*** va a interpretar que estás tratando de imprimir un `string`
 
-```python title="La función de print con números" linenums="1" hl_lines="1"
+```python title="La función de print con números interpretados como texto (strings)" linenums="1" hl_lines="1"
 print("3 + 2")# En este caso va a imprimir 3 + 2
 ```
 
-***
->:loudspeaker: **¡ATENCIÓN!**
->
->Si ya conoces y entiendes todas las funciones en la tabla puedes continuar a la sección de [**Discusión**](https://largo-de-un-string.palo-ooo.repl.co/#discusion "Ir a la sección de Discusión")
+
 
 ***
 ### Input
@@ -108,9 +136,9 @@ Estamos de acuerdo en que, el código anterior no puede ser una igualdad algebra
 
 Continuando con el ejemplo en el código anterior vemos que el programa toma el valor actual de la variable **`x`**, le añade una unidad y almacena el nuevo resultado en **`x`**.
 
-Vamos a ampliar la expresión anterior. EL siguiente código imprime el número 6 en la consola. 
+Vamos a ampliar la expresión anterior. El siguiente código imprime el número 6 en la consola. 
 
-```python title="Ampliando la expresión anterior " linenums="1" hl_lines="1 2"
+```python title="Ejemplo de cómo usar el operador de asignación" linenums="1" hl_lines="1 2"
 x = 5
 x = x + 1
 print(x)
@@ -123,20 +151,24 @@ print(x) # Imprime 5
 x = x + 1
 print(x) # Imprime 6
 ```
-En el código a continuación :point_down: la sentencia en la línea 1 **no tiene ningún sentido.** y devuelve un error. 
+En el código a continuación :point_down: la sentencia en la línea 1 **no tiene ningún sentido.** Intenta ejecutar este código y verás el error:  
 
 ```python title="Una línea de código sin sentido" linenums="1"
 x + 1
 ```
+![Error al entrar la expresión x + 1](https://user-images.githubusercontent.com/67485637/169199874-39daf619-d435-45f5-9715-b9e81de26de4.png "Error que nos devuelve la consola de Replit al entrar la expresión x + 1")
 
-***Python :snake:*** añadirá una unidad a **`x`**, pero el resultado nunca se almacenará ni tampoco se imprimirá. Intenta ejecutar este código y verás: 
+***Python :snake:*** añadirá una unidad a **`x`**, pero el resultado nunca se almacenará ni tampoco se imprimirá. 
 
-```python title="Una línea de código sin sentido" linenums="1"
+
+El código a continuación :point_down: imprimirá 5 en vez de 6 porque la programadora o el programador olvidó almacenar el resultado de `x + 1` en la variable `x`
+
+```python title="Un error  al omitir un operador de asignación" linenums="1" hl_lines="2"
+x = 5
 x + 1
 print(x)
 ```
-El código a continuación :point_down: imprimirá 5 en vez de 6 porque la programadora o el programador olvidó almacenar el resultado de `x + 1` en la variable `x`
-
+![replit com - python - results in the console](https://user-images.githubusercontent.com/67485637/169205219-f39a3bdd-99e2-497b-b208-bd948122d264.png "Resultados en la consola de Replit.com")
 
 **Sintaxis:**
 
@@ -236,6 +268,14 @@ print("Escribiste la palabra "+ palabra1)
 ```
 
 
-
+***
 ## Glosario
 
+***
+<!-- Templates --> 
+<!----- Notifications -----> 
+<!--
+>:loudspeaker: **¡ATENCIÓN!**
+>
+>Si ya conoces y entiendes todas las funciones en la tabla a continuación :point_down: entonces, puedes continuar a la sección de [**Discusión**](https://largo-de-un-string.palo-ooo.repl.co/#discusion "Ir a la sección de Discusión")
+-->
